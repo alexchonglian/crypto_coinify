@@ -1,0 +1,50 @@
+en:
+  formtastic:
+    hints:
+      contribution:
+        credits: "You have <strong>%{credits}</strong> in credits and can contribution with up to this amount without needing to make a new payment."
+        value: ""
+      project:
+        video_url_edit: 'Paste here the URL of your Vimeo/Youtube video.'
+        about: "Tell us about what inspired you to come up with this project . Be objective end charming, present your readers with something that moves them while being very transparent over the expectations on your project!"
+        more_links: "Which channels will be used to spread the word about your project? List here your facebook/twitter/blog/site/ and what ever more links you have to help you"
+        category: "Before you format your project explore other (successful) projects to inspire yourself!"
+        expires_at: "Finally, choose how long you want your campaign to last. Again, this is a strategic choice: if you put a lot of time, people will lose interest along the way; if put too little, you may not reach the minimum in time."
+        online_days: "Finally, choose how long you want your campaign to last. Again, this is a strategic choice: if you put a lot of time, people will lose interest along the way; if put too little, you may not reach the minimum in time."
+        goal: "Values in dollars (US$)"
+        first_contributions: "To reach your financial goal it’s indispensable to engage the people who are close to you and the project. So if you can list here who will be your first 20 contributions that would be a great sign ;) "
+        headline: "Summarize your project in 140 characters. This sentence will be the first contact people will have with your project, before even seeing the video. Be creative, clear and direct :)"
+        name: "Be as objective as you can. Leave explanations for the About section."
+        uploaded_image: "Upload a 512x400 image(.jpg)."
+        video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We recommend Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and make a video specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video. Observe ;)"
+      reward:
+        description: "Describe your reward in a way that arouses people's interest to contribute the project. Don't be shy!"
+        maximum_contributions: "If your reward is limited, tell us the maximum contributions."
+        minimum_value: "This is the minimum amount to choose this reward."
+        days_to_delivery: "Total of days to deliver the reward."
+    labels:
+      contribution:
+        anonymous: "I want my contribute to be anonymous."
+        credits: "I want to use my credits on this contribute."
+        reward: "Select your reward"
+        value: "How many Koins would you like?"
+      comment:
+        comment: "Leave your comment about this project"
+      project:
+        more_links: "List project related links *"
+        how_know: "How did you get to know Catarse?"
+        headline: "Punch Line"
+        category: 'Category'
+        first_contributions: "List your first contributions *"
+        about: "About your project. How will you spend this money?"
+        expires_at: "What's the deadline to reach your goal?"
+        goal: "How much do you intend to raise? (use only numbers)"
+        name: "Project's Name"
+        online_days: 'How Many Campaign Days?'
+        video_url: Video
+        uploaded_image: "Project thumbnail"
+      reward:
+        maximum_contributions: "Maximum contributions (optional)"
+        days_to_delivery: "Days to delivery"
+    optional: " (optional)"
+

@@ -1,0 +1,84 @@
+en:
+  channels:
+    admin:
+      statistics:
+        title: "Followers"
+        download: "Download list"
+      management:
+        no_partners: No registered partner
+        no_posts: No posts
+        title: "Management"
+        total: "projects"
+      filter:
+        title: "Filter"
+        by_id: "By ID"
+        between_created_at: "Created Between"
+        pg_search: "Project"
+        with_state: "With state"
+        user_name_contains: "User"
+        order_table: "Order table"
+        submit: "Filter"
+      table:
+        name: "Title"
+        category: "Category"
+        user_id: "User"
+        goal: "Goal"
+        pledged: "Pledged"
+        total_contributions: "Contributions"
+        recommended: "Recommend"
+        online_date: "Published"
+        expires_at: "Finished"
+        state: "State"
+        approve: "Approve"
+        reject: "Reject"
+        send_to_draft: "Send to draft"
+
+      menu: "Moderation Channels"
+      followers_menu: "Followers"
+      statistics_menu: "Statistics"
+      profile_menu: "Edit Channel"
+      partners_menu: "Edit partners"
+      confirmations:
+        destroy: Are you sure you want to delete?
+      followers:
+        index:
+          download: Download list
+          title: Followers
+      partners:
+        back_to_list: "← Back to managing partners"
+        new:
+          add_partner: Add partner
+        edit:
+          edit_title: Edit Partner
+        form:
+          hint_image: Image Size 370x320
+          save_submit: Save
+        index:
+          new_button: Add Partner
+          table:
+            created_at: Created
+            image: Image
+            name: Name
+            url: Site
+            actions: Actions
+          title: Manage partners
+      posts:
+        back_to_list: "← Back to news manage"
+        new:
+          create_news: Create news
+        edit:
+          edit_news: Edit news
+        index:
+          new_post_button: Create news
+          table:
+            actions: Actions
+            created_at: Created
+            published_at: Published
+            title: News title
+          title: Manage news
+        form:
+          save_submit: Save and Preview
+        update:
+          published_message: News was published and mailed to followers channel.
+        warning_html: Remember that all published news goes directly to the email your followers . Therefore , check well your text before sending it.
+      posts_menu: Manage news

@@ -1,0 +1,113 @@
+<%= stylesheet_link_tag 'resources/projects/horizontal' %>
+<%= stylesheet_link_tag 'resources/projects/ospb' %>
+
+<% raised_fund = @project.display_pledged[3..-1].to_f %>
+<% target_fund = @project.display_goal[3..-1].to_f %>
+
+<% if (current_user) %>
+    <div id="user_id" data-user-id="<%=current_user.id%>">
+
+<% end %>
+
+<div class='user_asset_inspector'>
+
+  <div class="upper_panel">
+
+    <div class="upper_left_panel">
+      <img width="150" style="border-radius:30px;" height="150" src="<%= @project.display_image %>">
+    </div>
+    <!-- upper_left_panel -->
+
+    <div class="upper_right_panel">
+      <span id="coin_title" class="coin_power_menu"><%= @project.name %></span>
+      <span>by <%= link_to @project.user.display_name, user_path(@project.user) %>
+      </span>
+      <div style='height: 20px'></div>
+      <%= @project.headline %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="lower_panel">
+
+  <div class="usercoin_content usercoin_content_purchase">
+    <div class="row">
+      <div class="col-sm-3">
+        <div style="border-color: #ececec; border-width: 1px;">
+            <div id='statistics' >
+
+                <div class='item contributions'>
+                  <h4>
+                  <%= @project.total_contributions %>
+                  <em> supporters</em>
+                  </h2>
+                </div>
+                <!-- item contributions -->
+
+                <div class='item goal'>
+                  <h4><%= @project.display_pledged %></h4>
+                    <em>raised out of <%= @project.display_goal %></em>
+                </div>
+                <!-- item goal -->
+
+                <div class='item time'>
+                  <% if @project.draft? || @project.rejected? %>
+                      <p><%= @project.online_days %>
+                        <em><%= @project.online_days %></em></p>
+                  <% else %>
+                      <p><%= @project.remaining_days %>
+                        <em><%= @project.time_to_go[:unit].upcase %></em></p>
+                  <% end %>
+                </div>
+                <!-- item time -->
+
+                <% if @project.online? %>
+                    <div id='pledge'>
+                      <%= form_tag(new_project_contribution_path(@project), method: :get, id: 'contribute_project_form') do %>
+                          <fieldset>
+                            <%= submit_tag  'Buy Koins', disabled: (not @project.online?), class: 'btn_send  btn btn-success',style: 'color: #ffffff;' %>
+                          </fieldset>
+                      <% end %>
+                    </div>
+                <% end %>
+
+                <!--<a class='twitter popup btn btn-primary' href="http://twitter.com/share?url=&hashtags=KoinifyFun,<%= @project.koinname%>&text=I%20love%20<%= @project.koinname %>.%20Retweet%20this%20msg to earn Koins! ">Tweet about this Koin</a>-->
+            </div>
+        </div>
+        </div>
+              <!-- statistics -->
+            <!-- statistics -->
+
+            <div class="col-sm-8">
+
+                    <%= @project.about.html_safe %>
+
+          </div>
+          <!-- info -->
+
+          <div>
+          </div>
+
+
+        </div>
+        <!-- sidebar -->
+      </div>
+
+    </div>
+    <!-- usercoin_content_purchase -->
+
+    <!--<div class="usercoin_content usercoin_content_rainfall">-->
+      <!--<span id="tweet">-->
+        <!--<a class='twitter popup' href="http://twitter.com/share?url=&hashtags=KoinifyFun,<%= @project.koinname%>&text=I%20love%20<%= @project.koinname %>.%20Retweet%20this%20msg to earn Koins! ">Tweet about this Koin (+ 100 Koin)</a>-->
+      <!--</span>-->
+    <!--</div>-->
+    <!-- usercoin_content_rainfall -->
+
+  </div>
+  <!-- lower_panel -->
+
+
+</div>
+</div><!-- user_asset_inspector -->

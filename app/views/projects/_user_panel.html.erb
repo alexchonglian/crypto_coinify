@@ -1,0 +1,244 @@
+<%= stylesheet_link_tag 'resources/projects/horizontal' %>
+<%= stylesheet_link_tag 'resources/projects/ospb' %>
+<%= stylesheet_link_tag 'sampler' %>
+<%= javascript_include_tag 'lib/tooltip' %>
+<%= javascript_include_tag 'lib/transition' %>
+
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, "script", "twitter-wjs");</script>
+
+
+
+<div class="pagespan container">
+  <div id="user_id" data-user-id="<%=current_user.id%>"></div>
+  <div class="wrap">
+    <div class="scrollbar">
+      <div class="handle">
+        <div class="mousearea"></div>
+      </div>
+    </div>
+
+
+    <div class="frame" id="centered">
+
+      <ul class="clearfix nav_koin">
+        <% params[:coins].each_with_index do |c, i| %>
+            <li class="coinButton" id="<%= c.coin_id %>"  data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+              <a class="coinButton" id="<%= c.coin_id %>">
+                <img src ="<%= c.display_image %>" class="coinButton" id="<%= c.coin_id %>" >
+                <%= c.name %>
+            </a>
+            </li>
+        <% end %>
+
+      </ul>
+    </div>
+
+    <div class="controls center">
+      <button class="btn prev">&lt;</button>
+      <button class="btn next">&gt;</button>
+    </div>
+  </div>
+
+<%
+=begin %>
+  <div class="wrap">
+    <h2>3D transforms &amp; transitions</h2>
+    <div class="scrollbar">
+      <div class="handle">
+        <div class="mousearea"></div>
+      </div>
+    </div>  
+    <div class="frame effects" id="effects">
+      <ul class="clearfix">
+        <li>Karma</li><li>DogeCoin</li><li>VertCoin</li><li>IXCoin</li><li>Bitcoin</li><li>Nxt</li><li>$Coin</li><li>4D Coin</li><li>Devcoin</li><li>Particle</li><li>Terracoin</li><li>Execoin</li><li>Emerald</li><li>Orbitcoin</li><li>DogeCoin</li><li>Darkcoin</li><li>ZetaCoin</li><li>PWC</li><li>Execoin</li><li>Pythonist</li><li>ASC</li><li>Bitgem</li><li>Frozen</li><li>Isracoin</li><li>NAS</li><li>KCoin</li><li>XCP</li><li>Novacoin</li><li>Peercoin</li><li>CatCoin</li>
+      </ul>
+    </div>
+  </div>
+
+<%
+=end %>
+
+</div>
+
+
+<div></div>
+
+
+<div id="collapseOne" class="panel-collapse collapse">
+<div class="panel-body">
+    
+<div class='user_asset_inspector'>
+
+  <div class="upper_panel">
+
+    <div class="upper_left_panel">
+      <img id="project_image" width="210px" style="border-radius:105px;" height="210" src="">
+      <!--
+      <div class="circle_panel">
+        <div class="inner_circle_panel"></div>
+        <div class="days_value">12</div>
+        <div class="days_left">DAYS LEFT</div>
+        <div class="percent_value">82%</div>
+        <div class="percent_left">FUNDED</div>
+      </div> -->
+    </div> <!-- upper_left_panel -->
+    
+    <div class="upper_right_panel">
+
+      <div id="coin_title" class="coin_power_menu">4D Coin</div>
+
+
+
+      <div id="menu-right">
+        <ul class="coin_feed">
+          <li class="coin_feed_li">
+            21:19 
+            <%= image_tag 'dragon/d1.png' %>
+            <a href='#'>John Smedley</a> purchase <a href='#'>+3 upgrades</a> for 30000 Koins
+          </li>
+          <li class="coin_feed_li">
+            21:09 
+            <%= image_tag 'dragon/d2.png' %>
+            <a href='#'>Trip Hawkins</a> unlock hidden character <a href='#'>Red Dragon</a> &amp; <a href='#'>Blue Dragon</a> for 56000 Koins
+          </li>
+          <li class="coin_feed_li">
+            20:57 
+            <%= image_tag 'dragon/d3.png' %>
+            <a href='#'>Nolan Bushnell</a> sold 1000 Koins on <a href='#'>Counterparty</a>
+          </li>
+          <li class="coin_feed_li">
+            19:37
+            <%= image_tag 'dragon/d4.png' %>
+            <a href='#'>Tim Cain</a> purchase <a href='#'>3 weapons</a> at 4500 Koins
+          </li>
+          <li class="coin_feed_li">
+            19:21
+            <%= image_tag 'dragon/d5.png' %>
+            <a href='#'>Chris Weaver</a> bid <a href='#'>4100 Koins</a> for $34.21, averaging <a href='#'>$8.34</a> per 1000 Koins
+          </li>
+          <li class="coin_feed_li">
+            19:17
+            <%= image_tag 'dragon/d6.png' %>
+            <a href='#'>Gary Carlston</a> customize <a href='#'>avator</a> for 3600 Koins
+          </li>
+          <li class="coin_feed_li">
+            19:02
+            <%= image_tag 'dragon/d7.png' %>
+            <a href='#'>Don Daglow</a> got 34 retweets and won <a href='#'>3400 Koins </a> as reward</li>
+          <li class="coin_feed_li">
+            18:39
+            <%= image_tag 'dragon/d8.png' %>
+            <a href='#'>Tony Goodman</a> purchased <a href='#'> subscription code of Koin Club</a> for 27000 Koins 
+          </li>
+          <li class="coin_feed_li">
+            17:52
+            <%= image_tag 'dragon/d9.png' %>
+            <a href='#'>Feargus Urqhart</a> gave <a href='#'>Gary Carlston</a> a gift that worth 7600 Koins
+          </li>
+          <li class="coin_feed_li">
+            17:35
+            <%= image_tag 'dragon/d10.png' %>
+            <a href='#'>Warren Spector</a> got 45 retweets and is rewarded 540 Koins
+          </li>
+          <li class="coin_feed_li">
+            16:59
+            <%= image_tag 'dragon/d11.png' %>
+            <a href='#'>Ken Williams</a> purchase upgrades and unlock <a href='#'>hidden characters</a> for 23400 Koins
+          </li>
+          <li class="coin_feed_li">
+            15:21
+            <%= image_tag 'dragon/d12.png' %>
+            <a href='#'>Lorne Lanning</a> purchase <a href='#'>5000 power-ups </a> for 5000 Koins
+          </li>
+          <li class="coin_feed_li">
+            14:08
+            <%= image_tag 'dragon/d13.png' %>
+            <a href='#'>Feargus Urqhart</a> Customize costume <a href='#'>Purchase</a> upgrades Purchase upgrades
+          </li>
+          <li class="coin_feed_li">
+            13:49
+            <%= image_tag 'dragon/d14.png' %>
+            <a href='#'>Chris Weaver</a> Purchase <a href='#'>upgrades</a> Unlock hidden <a href='#'>Unlock</a> hidden characters
+          </li>
+          <li class="coin_feed_li">
+            12:01
+            <%= image_tag 'dragon/d15.png' %>
+            <a href='#'>Trip Hawkins</a> Unlock characters <a href='#'>Customize</a> costume Customize costume
+          </li>
+          <li class="coin_feed_li">
+            10:21
+            <%= image_tag 'dragon/d16.png' %>
+            <a href='#'>Chris Weaver</a> purchase <a href='#'> unlimited money for 12 hours</a> for 3400 Koins
+          </li>
+          <li class="coin_feed_li">
+            09:54
+            <%= image_tag 'dragon/d17.png' %>
+            <a href='#'>Tim Cain</a> purchase <a href='#'> map for level 9 </a> for 8900 Koins 
+          </li>
+          <li class="coin_feed_li">
+            09:43
+            <%= image_tag 'dragon/d18.png' %>
+            <a href='#'>Gary Carlston</a> bid <a href='#'>61000 Koins</a> for $456.68, averaging <a href='#'>$7.48</a> per 1000 Koins 
+          </li>
+        </ul>
+      </div><!-- menu-right -->
+    </div><!-- upper_right_panel -->
+
+  </div><!-- upper_panel -->
+
+
+  <div class="lower_panel">
+    <div class="usercoin_tab_nav">
+      <span class="usercoin_tab usercoin_tab_active   usercoin_tab_rainfall">Earn Koins</span>
+      <span class="usercoin_tab usercoin_tab_inactive usercoin_tab_redeem">Redeem</span>
+      <span class="usercoin_tab usercoin_tab_inactive usercoin_tab_gift">Gift</span>
+    </div>
+
+    <div class="usercoin_content usercoin_content_rainfall" style="margin-top: 10px;">
+      <p>Get Free Koins by tweeting this Koin </p>
+      <p>Get Free Koins by helping game developer promote the Koin </p>
+      <p>The More Retweet, The More Free Koins </p>
+      <span id="tweet">
+        <a href='#'>Tweet</a>
+      </span>
+    </div><!-- usercoin_content_rainfall -->
+
+    <div class="usercoin_content usercoin_content_redeem">
+      <ul class="list-group coin_power_ul">
+
+      </ul>
+      <center><input class='btn btn-primary' type='submit' value='redeem'> </center>
+    </div><!-- usercoin_content_redeem -->
+
+
+    <div class="usercoin_content usercoin_content_gift">
+      <p>Share Some Koins to your Facebook Friends ? </p>
+      <p>Share Some Koins to your Facebook Friends ? </p>
+      <p>Share Some Koins to your Facebook Friends ? </p>
+      
+      <center>
+        <a class="btn btn-primary" id="fb_gift">Gift</a>
+        <a class="btn btn-primary" id="fb_login">Login</a>
+        <a class="btn btn-primary" id="fb_logout">Logout</a>
+      </center>
+      <div id="mfs">  </div>
+    </div><!-- usercoin_content_redeem -->
+
+
+
+  </div><!-- lower_panel -->
+
+
+</div><!-- user_asset_inspector -->
+</div><!-- panel-body -->
+</div><!-- collapseOne -->
+
+<div id="fb-root"></div>

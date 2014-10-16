@@ -1,0 +1,33 @@
+
+
+.w-container.proxima
+  = render 'devise/shared/header'
+
+  .w-row
+    .w-col.w-col-3
+    .w-col.w-col-6.box-login
+
+      - if params["rewards"] == "1"
+        h2.text-center = "Claim your reward Koins"
+      - else
+        h2.text-center = "Sign up on Koinify"
+
+
+      .register
+      .login-twitter
+        = button_to "Twitter login", user_omniauth_authorize_path(provider: :twitter, locale: nil), class: 'button bt-medium bt-fb'
+
+      /
+      /.w-form.form-login
+      /  = simple_form_for(resource, as: resource_name, url: sign_up_url) do |form|
+      /    .box-error-login
+      /      = render 'devise/shared/alert'
+      /
+      /    = form.input :name, as: :string, label: t('.form.labels.name'), input_html: { class: 'w-input text-field' }
+      /
+      /    = form.input :email, as: :email, wrapper_html: { class: 'no-asterisk' }, input_html: { class: 'w-input text-field' }
+      /
+      /    .password
+      /      = form.input :password, as: :password, label: t('.form.labels.password'), hint: t('.form.hint.password_length'), input_html: { class: 'w-input text-field' }
+      /    = form.submit t('.form.inputs.submit'), class: 'w-button button bt-medium'
+      /

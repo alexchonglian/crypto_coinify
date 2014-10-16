@@ -1,0 +1,103 @@
+en:
+  users:
+    project:
+      confirmed: "Confirmed"
+      refunded: "Refunded"
+      requested_refund: "Refund requested"
+      waiting_confirmation: "Waiting confirmation"
+    set_email:
+      site_title: 'Define your email address'
+      title: 'Define your email address'
+      submit: 'Save my email and proceed'
+    show:
+      projects:
+        no_projects: "%{name} haven't started any project on Catarse yet. We wonder if inspiration will hit one of these days!"
+        no_projects_current_user_html: "You haven't submitted any project to Catarse yet. Let the inspiration flow and %{link} to start!"
+        title: "%{name}'s projects"
+        title_current_user: "My projects"
+      contributions:
+        anonymous: "Anonymous contribution."
+        no_contributions: "%{name} haven't contributed any project yet. But we know it's just a matter of time! :D"
+        no_contributions_current_user_html: "You haven't contributed any project yet. What about <a href=\"/\">starting now</a>?"
+        no_reward: "You didn't pick a reward"
+        title: "Projects %{name} has contributed"
+        title_current_user: "Projects I've contributed"
+        your_reward: "Your reward"
+      attention: Attention
+      tabs:
+        contributed_projects: "Contributed projects"
+        created_projects: "Created projects"
+        comments: Comments
+        credits: Credits
+        settings: Settings
+        unsubscribes: Notifications
+      user_social:
+        email: "Send me an email"
+        facebook: "Profile on facebook"
+        twitter: "Profile on twitter"
+    contributions:
+      anonymous: "Anonymous contribution."
+      no_contributions: "%{name} haven't contributed any project yet. But we know it's just a matter of time! :D"
+      no_contributions_current_user_html: "You haven't contributed any project yet. What about <a href=\"/\">starting now</a>?"
+      no_reward: "You didn't pick a reward"
+      title: "Projects %{name} has contributed"
+      title_current_user: "Projects I've contributed"
+      your_reward: "Your reward"
+    unsubscribes:
+      title: "Choose from which projects you want to receive update notifications:"
+      updates: "I want to receive project updates"
+    current_user_fields:
+      bio_limit: 'only 140 characters'
+      updated: "Your information has been updated"
+      update_social_info: "Update info"
+      social_info: "Contact info"
+      twitter: "twitter ( username )"
+      facebook_link: "facebook profile (full link)"
+      other_link: "another internet page"
+      change_password: "Change my password"
+      current_password_hint: "<i>We need your current password to confirm your changes.</i>"
+      email_hint: "Your email will only be used for communications from Catarse and from the projects you contributed to. It won't be visible in your profile. When you contribute a project, we will give your email to the project owner so he can provide your rewards."
+      email_tooltip: "Click here to fill your email..."
+      gravatar_hint_html: "Want to change your picture? Use %{link} with your email. It's as simple as uploading an image and works for other sites as well ;)"
+      local_avatar: "My avatar"
+      submit_text: "Choose your picture"
+      submit: "Submit"
+      my_data: "My profile"
+      newsletter: "I want to receive news from Catarse via email"
+      password_hint: "<i>Leave blank if you don't want to change it.</i>"
+    header:
+      bio_tooltip: "Click here to write about you..."
+      name_tooltip: "Click here to fill your name..."
+    projects:
+      no_projects: "%{name} haven't started any project on Catarse yet. We wonder if inspiration will hit one of these days!"
+      no_projects_current_user_html: "You haven't submitted any project to Catarse yet. Let the inspiration flow and %{link} to start!"
+      title: "%{name}'s projects"
+      title_current_user: "My projects"
+    credits:
+      modal:
+        title: "Do you want to confirm your refund request?"
+        text: "Check out how our refund process works:"
+        link: "See how the refund works"
+        reject_btn: "I want to keep my credits"
+        accept_btn: "I want to request the refund"
+      index:
+        contribution_date: "Contribution date"
+        current_credits_html: "Your current balance is <span id=\"current_credits\">%{credits}</span> in credits."
+        important_html: "If you ask for a refund, the value of your payment will be deducted from your credits."
+        project: Project
+        refund_expiration_date_html: "Deadline to request refund (<a target='__blank' href='http://suporte.catarse.me/knowledgebase/articles/164746-regras-e-funcionamento-dos-reembolsos-estornos'>?</a>)"
+        refunded: "Refund request successfully done. Our team will contact you within two business days."
+        insufficient_credits: "You don't have enough credits to request this refund."
+        refunds_title: "Payments that can be refunded"
+        request_refund: "Request refund"
+        requested_refund: "Requested refund"
+        status: Status
+        title: "My credits"
+        value: Value
+      refund:
+        cannot_refund: "This payment cannot be refunded."
+        error: "Oops. There was an error while requesting your refund."
+        no_credits: "You don't have enough credits to request this refund."
+        refunded: "This payment has already been refunded."
+        requested_refund: "You already requested a refund for this payment."
+      title: "My credits"

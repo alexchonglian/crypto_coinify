@@ -1,0 +1,156 @@
+header
+  = javascript_include_tag "app/project/newproject"
+  = stylesheet_link_tag "sampler"
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+  = stylesheet_link_tag "summernote-bs3"
+  = javascript_include_tag "summernote"
+
+
+/<script src="/assets/summernote.min.js"></script>
+<div id="user_id" data-user-id="<%=current_user.id%>"></div>
+
+#page_content style="background-color: white;"
+
+  .container
+    .start_content
+        .clearfix
+        <div class="container">
+          /.campaign_summary
+          /  .campaign_icon_div
+          /    .campaign_icon
+          /      /= image_tag('/assets/hexagon3.png')
+          /      .campaign_icon_pattern
+          /        .campaign_icon_title
+          /          = 'You'
+          /
+          /  .campaign_intro
+          /  .campaign_headline
+          /  .campaign_power
+          /  .campaign_feature
+
+
+          <!-- Static navbar -->
+          <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                  <li  class="goto1"><a href="#">1. BASICS</a></li>
+                  <li class="goto2" ><a  href="#">2. DESIGN KOIN </a></li>
+                  <li class="goto3"><a  href="#">3. STORY</a></li>
+
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </div>
+
+          = semantic_form_for @project, html: { id: 'project_form', class: 'form-horizontal', role:'form'} do |form|
+           .container-fluid
+            = form.inputs do
+
+              .input.control-group.error
+              #create_campaign_form_1.create_campaign_form
+                .row
+
+                  .current_page_info
+                  /center = 'Page 1 in 3'
+                .row
+                  .form-group
+                    = form.label :name_your_coin, html: {}, class: 'col-sm-2 control-label'
+                    .col-sm-4
+                      = form.text_field :koinname, class: "input_koinname form-control #{'error' if @project.errors[:goal].present?}"
+                    .warn.warn-koinname = 'Alphabetics only, no space slash or underscore'
+                .row
+                  .form-group
+                    = form.label :headline, class: 'col-sm-2 control-label'
+                    .col-sm-8
+                      = form.text_field :headline, {  class: "input_headline form-control #{'error' if @project.errors[:headline].present?}" }
+                    .warn.warn-headline = '10-140 characters'
+                .row
+                  .form-group
+                    = form.label :category, class: 'col-sm-2 control-label'
+                    .col-sm-6
+                      = form.select :category_id, Category.array, class: "form-control #{'error' if @project.errors[:category].present?}"
+
+                /.image-selector
+                /  - for i in 1..2
+                /    .row
+                /      .col-sm-offset-2
+                /        - for j in 0..4
+                /          .col-sm-2
+                /            <input type="radio" name="image" value="image#{i*3+j}"></input>
+                /            div class="sampler koin#{i*3+j}"
+
+                .top-buffer
+                .form-group
+                  <div class="col-sm-offset-2 col-sm-10">
+                    .next_form
+                      <input type='button' value='Next' class=' myButton goto2 btn btn_send' style='float:right; width:200px; height:50px' />
+                  </div>
+
+
+              #create_campaign_form_2.create_campaign_form
+                .row
+                  .current_page_info
+                    /center = 'Page 2 in 3'
+                .row
+
+                  .form-group
+                    = form.label :goal, class: 'col-sm-2 control-label'
+                    .col-sm-2
+                      = form.text_field :goal, class: "input_goal form-control #{'error' if @project.errors[:goal].present?}"
+                    .warn.warn-goal = 'Numeric value only'
+                .row
+
+
+                  .form-group
+                    = form.label "Features", class: 'col-sm-2 control-label'
+                    - KoinFeature.array.each_with_index do |f,i|
+                      .col-sm-2
+                        <input type='checkbox' name="koin_features_#{i}" value="#{f}" class='form-control' />
+                        =f
+                .form-group
+                  .row
+                    = form.label "Special Powers for purchase", class: 'col-sm-2 control-label'
+
+                    .col-sm-6
+                      /= form.text_field :koin_pow_0, class: "form-control"
+
+
+                      <input type='text' width="20" id="project_koin_powers_0" name="project[koin_powers_0]" placeholder='E.g. Unlock Level 50+ @ 1500. (1500 is Koins cost to redeem the power.' class='form-control'/>
+                    .col-sm-2
+                      <a link="#" id="addPower" value="">Add new power</a>
+                  .powers
+                .row
+                  .form-group
+                    <div class="col-sm-offset-2 col-sm-10">
+                      .next_form
+                        <input type='button' value='Next' class=' myButton goto3 btn btn_send' style='float:right; width:200px; height:50px' />
+                    </div>
+              #create_campaign_form_3.create_campaign_form
+                  .current_page_info
+                    /center = 'Page 3 in 3'
+                  .input
+                    = form.label "Project Story", class: 'col-sm-2 control-label'
+                    .col-sm-10
+                      = form.text_area :about, cols: 20, rows:10, class: "form-control #{'error' if @project.errors[:about].present?}"
+                      <div name="project[about]" id="project_about" class="summernote"  placeholder="Write a good story for your Koin" class="summernote"></div>
+
+                  .clearfix
+                  .clearfix
+                  <div style="margin-top:10px;">
+                  .form-group
+                    <div class="col-sm-offset-2 col-sm-10">
+                    fieldset
+                        .send
+                          = submit_tag 'Launch the Koin', id: 'project_submit', class: 'btn_send myButton  btn', style:'float:right; width:200px; height:50px'
+    .clearfix

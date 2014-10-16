@@ -1,0 +1,29 @@
+- if policy(@project).update?
+  br
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Your project is online!
+      #toggle_warning
+        = link_to '(minimize information)', '#'
+      #project_warning_text
+        br/
+        strong Important!
+        br/
+        | - Contributions may take up to 3 business days to be confirmed.
+        br/
+        | - The term ends to 23:59 on the last day of the project contribution timespan.
+        br/
+        | - To speak directly with your supporters you can make posts in the <strong>News tab</strong>. Everything posted there will be sent to the e-mail of the supporters.
+        br/
+        | - For the <strong>#{link_to 'Reports tab', project_by_slug_path(permalink: @project.permalink, anchor: 'reports')}</strong> you can download spreadsheets with information about its supporters as: Reward | Value Support | Date of confirmation of support | Name | E-mail | address.
+        br/
+        br/
+        strong Troubleshooting:
+        br/
+        = link_to 'How do I know if my project is going well?', 'http://suporte.catarse.me/knowledgebase/articles/161084-como-eu-sei-se-meu-projeto-est%C3%A1-caminhando-bem-', target: '__blank'
+        br/
+        = link_to 'How are the highlights for projects defined in site', 'http://suporte.catarse.me/knowledgebase/articles/161081-como-s%C3%A3o-definidos-os-projetos-em-destaque-no-site', target: '__blank'
+        br/
+        = link_to 'Help! Errors in reports of supporters', 'http://suporte.catarse.me/knowledgebase/articles/274781-socorro-erros-no-relat%C3%B3rio-planilha-de-apoiador', target: '__blank'
+        br/
+        = link_to 'Help! People are struggling to support my project', 'http://suporte.catarse.me/knowledgebase/articles/274798-socorro-problema-erro-bug-ao-apoiar-projeto', target: '__blank'

@@ -1,0 +1,155 @@
+
+<html>
+  <head>
+  <title>20 Lines JavaScript - Super Mario Tribute</title>
+  <meta name="description" content="A Super Mario Bros. inspired web game in 20 lines of JavaScript code." />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript" src="mini_mario.js"></script>
+
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <style>
+      /* Space out content a bit */
+      body {
+          padding-top: 20px;
+          padding-bottom: 20px;
+      }
+
+      /* Everything but the jumbotron gets side spacing for mobile first views */
+      .header,
+      .marketing,
+      .footer {
+          padding-right: 15px;
+          padding-left: 15px;
+      }
+
+      /* Custom page header */
+      .header {
+          border-bottom: 1px solid #e5e5e5;
+      }
+      /* Make the masthead heading the same height as the navigation */
+      .header h3 {
+          padding-bottom: 19px;
+          margin-top: 0;
+
+
+          margin-bottom: 0;
+          line-height: 40px;
+      }
+
+      /* Custom page footer */
+      .footer {
+          padding-top: 19px;
+          color: #777;
+          border-top: 1px solid #e5e5e5;
+      }
+
+      /* Customize container */
+      @media (min-width: 768px) {
+          .container {
+              max-width: 730px;
+          }
+      }
+      .container-narrow > hr {
+          margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+          text-align: center;
+          padding-top: 00px;
+          border-bottom: 1px solid #e5e5e5;
+      }
+      .jumbotron .btn {
+          padding: 14px 24px;
+          font-size: 21px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+          margin: 40px 0;
+      }
+      .marketing p + h4 {
+          margin-top: 28px;
+      }
+
+      /* Responsive: Portrait tablets and up */
+      @media screen and (min-width: 768px) {
+          /* Remove the padding we set earlier */
+          .header,
+          .marketing,
+          .footer {
+              padding-right: 0;
+              padding-left: 0;
+          }
+          /* Space out the masthead */
+          .header {
+              margin-bottom: 30px;
+          }
+          /* Remove the bottom border on the jumbotron for visual effect */
+          .jumbotron {
+              border-bottom: 0;
+          }
+      }
+      div {
+
+      }
+
+      div#mario_sprite {
+          position:absolute;
+          width:16px;
+          height:16px;
+          overflow:hidden;
+      }
+
+      div.mapsprite {
+          position:absolute;
+          width:16px;
+          height:16px;
+          overflow-x:hidden;
+      }
+  </style>
+
+  </head>
+  <body >
+
+
+
+  <div class="container">
+      <div class="panel panel-primary">
+
+
+          <div class="panel-heading" align="left">
+
+              <h1 class="panel-title">Crowdfunded Mario</h1>
+
+          </div>
+          Game account:lugi@koinify.com</p>
+
+      </div>
+
+      <div class="alert alert-info">
+          <p id="powers"></p>
+      </div>
+
+  </div>
+</div>
+
+
+
+      <div id="container" style="position:relative;display:block">
+          <div id="mario" style="top:00;border:0px solid black;position:absolute;background-color:#6B8CFF;width:512px;height:320px;overflow:hidden;"></div>
+          <div id="mario_2" style="border:0px solid black;position:absolute;width:512px;height:320px;overflow:hidden;"></div>
+
+      </div>
+
+  </body>
+  </html>

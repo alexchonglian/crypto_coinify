@@ -1,0 +1,126 @@
+en:
+  activerecord:
+    models:
+      channel: Channel
+      contribution: Contribution
+      category: Category
+      project: Project
+      reward: Reward
+    attributes:
+      project:
+        category: "Pick a category that best describes your project"
+        expires_at: Deadline
+        online_days: Days of the air campaign
+        name_your_coin: Name your Koin
+        koin_power: Koin Powers
+        headline: "Create a headline"
+        image_url: "Image URL"
+        name: "Name Your Koin"
+        user_id: "User ID"
+        video_url: "Video URL "
+        permalink: 'Project URL'
+        how_know: "How did you hear about Catarse?"
+        more_links: 'More to say about your project?'
+        name_your_coin: "Name your Koin"
+        coins_quantity: "What's the coins quantity"
+        goal: "How much you want to raise?"
+        about: "Project history"
+        first_contributions: "List of first supporters"
+      user:
+        address_city: City
+        address_complement: Complement
+        address_neighbourhood: Neighbourhood
+        address_number: Number
+        address_state: State
+        address_street: Street
+        address_zip_code: "Zip code"
+        cpf: 'CPF / CNPJ '
+        cpf_hint_title: 'Invoice will be sent to this document'
+        cpf_hint: '(?)'
+        state_inscription: 'State Inscription'
+        moip_login: 'MoIP Login'
+        moip_login_hint: '(How to create an account)'
+        current_password: "Current password"
+        email: Email
+        full_name: "Full name / Company Name"
+        bio: 'Mini Bio'
+        name: "Nickname"
+        password: Password
+        password_confirmation: "Password Confirmation"
+        phone_number: "Mobile phone number"
+        newsletter: 'I want receive news about Catarse'
+        id: ID
+        reset_password_token: "Link to recreate password"
+      channel:
+        description: Description
+        how_it_works: How It Works
+        image: Image of the notification 
+        name: Name
+        video_url: Video
+      channel_partner:
+        name: 'Name'
+        url: 'Site'
+        image: 'Image'
+      channel_post:
+        title: 'Title'
+        body: 'Body'
+        visible: 'Post (Select if you want to publish this news)'
+    errors:
+      models:
+        project:
+          attributes:
+            permalink:
+              invalid: 'Invalid project permalink'
+        user:
+          attributes:
+            email:
+              not_found: "The email is not registered, verify the address or register yourself."
+              taken: "is already registered, login"
+              invalid: "That email address is invalid"
+            password:
+              too_short: "The password you have chosen is too short"
+              confirmation: "The password and confirmation password do not match are fulfilled"
+            reset_password_token:
+              invalid: 'expired. Go to <a href="/password/new"> reset password </ a> and ask to reset the password again.'
+  project:
+    video_regex_validation: only Vimeo URLs are supported
+  contribution:
+    display_confirmed_at: "%{time_ago} ago"
+    reward_must_be_from_project: "must be from the same project"
+    should_not_contribute_if_maximum_contributions_been_reached: "has reached its maximum contributions"
+    value_must_be_at_least_rewards_value: "must be at least %{minimum_value} for the selected reward"
+    project_should_be_online: "You cannot contributions a project that is not online"
+  contribution_report_to_project_owner:
+    reward_description: 'Reward description'
+    confirmed_at: 'Payment confirmed at'
+    value: 'Contribution value'
+    service_fee: 'Service fee'
+    user_name: 'Contribution name'
+    user_email: 'Koinify user profile e-mail'
+    payer_email: 'Payment gateway user e-mail'
+    payment_method: 'Payment method'
+    address_street: 'Street'
+    address_complement: 'Complement'
+    address_number: 'Number'
+    address_neighbourhood: 'Neighbourhood'
+    address_city: 'City'
+    address_state: 'State'
+    address_zip_code: 'Zip code'
+    anonymous: 'Anonymous'
+  user:
+    no_name: No name
+    contributions_text:
+      many: "Contributed this and other %{total} projects"
+      one: "Contributed only this project until now"
+      two: "Contributed this and 1 other project"
+  channels_subscribers:
+    created: 'Now you follow the %{channel}' 
+    deleted: 'You failed to follow the %{channel}'
+  channels:
+    edit: update channel 
+    subscribed: "+% {count} followers"
+    back_to_news: '← Back to the news'
+    follow: "follow the channel"
+    following: "Following"
+    unfollow: "Unfollow"
+    subscribed: "% {count} following the channel"

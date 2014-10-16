@@ -1,0 +1,24 @@
+
+#page_content
+
+  <div id='cssmenu'>
+    <ul>
+      - if current_user and @coins and @coins.size > 0
+        <li  id="l_mykoins" class='active'><a href='#'><span>My Koins</span></a></li>
+      /<li id="l_headlines"><a href='#' ><span>Headlines</span></a></li>
+      <li id="l_allkoins" ><a href='#' ><span>Explore Koins</span></a></li>
+    </ul>
+    </div>
+  .container
+    .main
+      -if current_user
+        #mykoins
+          == render 'mykoins'
+
+      #allkoins
+        section.expiring_projects.list
+          /header
+          .projects
+            == render @expiring
+    .clearfix
+

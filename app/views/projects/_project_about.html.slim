@@ -1,0 +1,13 @@
+.media
+  .video
+    - if @project.video_valid?
+      iframe src="#{@project.display_video_embed_url}" width="640" height="430" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+  .social
+
+
+.clearfix
+#project_embed.hide data-path=embed_panel_project_path(@project)
+  = image_tag "loading.gif", class: 'loader'
+.text
+  p
+    = @project.about_html.html_safe

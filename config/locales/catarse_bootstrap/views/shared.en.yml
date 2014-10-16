@@ -1,0 +1,20 @@
+en:
+  shared:
+    accept_terms_html: "I have read and accepted the %{link}."
+    header_channel:
+      submit: "Send project"
+      how_works: "How works"
+      what_is_channel: "What is a channel?"
+      contact: "Contact"
+      profile: "My profile"
+      my_credits: "My credits"
+      logout: "Logout"
+      signup: "Sign up"
+      signin: "Sign in"
+    footer_channel:
+      terms: "Terms"
+      privacy_policy: "Privacy"
+      how_works: "How works"
+      contact: "Contact"
+      what_is_channel: "What is a channel?"
+      how_channels_work: "Understand Channels in Koinify"

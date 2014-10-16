@@ -1,0 +1,7 @@
+en:
+  rewards:
+    index:
+      display_remaining: "%{remaining} of %{maximum} available"
+      dont_want: "Do not want to reward"
+      limited: Limited
+      sold_out: Sold out

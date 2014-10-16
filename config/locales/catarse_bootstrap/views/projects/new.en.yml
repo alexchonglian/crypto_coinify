@@ -1,0 +1,45 @@
+en:
+  projects:
+    new:
+      legend_html: "After filling in the form below, you will receive a project page in Draft mode. In this draft you will add the rewards for your contributions. You may also share the page with your friends to collect feedback and sharpen your project even more.<br><br>The information filled in below is not definitive, but remember that the more consistent you are in your project submission, the faster it will go on air.<br><br><b>Very Important:</b> <i>Catharsis is cured platform, which means that our board will evaluate the focus, the feasibility and consistency of your project during the Draft. If we understand that your project does not comply with our <a href='https://docs.google.com/a/catarse.me/document/d/1wLDS2lphQ6monovg9rEaTIDcxBD3FRZV9dfGKmajyj8/edit' target='_blank' >selection criteria</a>, it may be refused by the team of curators.</i>"
+      permalink_important: 'Try not to use underline, hyphen etc.'
+      permalink_hint: 'Go simple. Your contributions should be able to remember the URL to your project ;)'
+      name_important: "Do not exceed  50 characters"
+      online_days_important: "60 days is the maximum"
+      raise_money_important: "in USD"
+      koin_name_important: 'MarioCoin for example'
+      koin_power_important: 'Premium level, early access, unlock characters, purcharse upgrades'
+      about_important: "Don't make it too long! Indicate links so people can know more about your work"
+      important_html: 'Keep in mind the 5% fee charged by Koinify in case you reach your financial goal. Just divide your final budget by 0.87 to find the discounted amount.'
+      send_project: "I want to submit my project."
+      video_important: "The video must be hosted by Vimeo or Youtube. Paste here the URL!"
+      more_links_important: "It's very important to use social medias to spread the word about your project and engage your network into making it a success"
+      first_contributions_important: "These people are fundamental to the success of your project."
+      how_know_important: "Yay! We reached  the final question."
+      headline_important: "It's a summary of  your project . 140 characters tops!:D"
+      tags_important: "Check other projects in your category  <a href='%{href}' target='_blank'>here!</a>!."
+      subtitle: "The time to make it happen is now! We really want to know what you're up to..."
+      title: "Launch a Koin"
+      about: "Describe your project and how much do you need"
+      category: "Project category"
+      how_much_you_need: "Funding target"
+      about_hint: "Tell us a little about what you want to do, how much you need and what for. Be brief and punctual, but don't forget to give the readers something that moves them. After all, it's your creation and they need to see your passion taking place!"
+      contact: "Leave us your email address so we can contact you"
+      links: "Where can we find more about you and your project?"
+      links_hint: "Leave us as many links as you have, so we can get to know your work and your project better. Doesn't have to be something formal or fancy, just a few useful links."
+      video: "Your project already have a video?"
+      video_hint: "A Vimeo / Youtube link"
+      twitter: "Have twitter account?"
+      facebook: "Have facebook account?"
+      blog: "Have a blog about the project?"
+      know_us_via: "How did you meet Catarse?"
+      how_works: "How to mobilize contributions to raise $ needed for enforcement?"
+      project_warning:
+        content_html: "Want to have your project selected? Don't forget to read %{link}."
+        help_link: "our guide"
+      rewards: "What rewards do you want to offer?"
+      rewards_hint: "We believe that the best way to inspire people to contribute a project is offering excellent – and creative! – rewards. Everybody loves limited editions, unique things and joyful experiences (parties, candies, balloon travelling!). Spend some time devising creative rewards and people will be interested."
+      submit: "Save draft"
+      subtitle: "The time to make it happen is now! We really want to know what you're up to..."
+      title: "Submit your project"
+

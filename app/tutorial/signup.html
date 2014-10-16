@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Signup</title>
+	<link rel="stylesheet" href="lib/signup.css">
+	<link rel="stylesheet" href="lib/jquery-ui.css">
+	<link rel="stylesheet" href="lib/image-picker.css">
+	<link rel="stylesheet" href="lib/jquery.upvote.css">
+	<script src="lib/jquery-1.11.1.min.js"></script>
+	<script src="lib/jquery-ui.js"></script>
+	<script src="lib/image-picker.js"></script>
+	<script src="lib/jquery.upvote.js"></script>
+	<script src="lib/jquery.easing.1.3.js"></script>
+	<script src="lib/jquery.bpopup.min.js"></script>
+	<link rel="shortcut icon" href="lib/images/koin.png">
+<body>
+	<!-- multistep form -->
+	<form id="msform">
+		<!-- progressbar -->
+		<ul id="progressbar">
+			<li class="active">Welcome</li>
+			<li>Welcome package</li>
+			<li>Choose a type</li>
+			<!-- <li>Vote</li> -->
+			<li>Sharing</li>
+		</ul>
+		<!-- fieldsets -->
+		<fieldset class="wide-fieldset longer-fieldset">
+			<h2 class="fs-title">Welcome to Koinify</h2>
+			<table style="width:100%">
+			  <tr>
+				<td align="center"><img src="lib/images/koin.png"></td>
+			  </tr>
+			</table>
+			<table>
+			  <tr>
+				<td align="right" width="10%"><img class="icon" src="lib/images/square-icon.png"></td>
+			    <td class="fs-text" align="left">Explore and support your favorite project by using and purchasing Koins</td>
+			  </tr>
+			  <tr></tr>
+			  <tr>
+				<td align="right"><img class="icon" src="lib/images/square-icon.png"></td>
+				<td class="fs-text" align="left">Each Project has its own Koin, that can be redeemed for virtual items and special privileges</td>
+			  </tr>
+			  <tr></tr>
+			  <tr>
+				<td align="right"><img class="icon" src="lib/images/green-square-icon.png"></td>
+				<td class="fs-text" align="left">Want to support a project? Just purchase their Koins or promote them and earn Koins!</td>
+			  </tr>
+			</table>
+			<input type="button" name="next" class="next action-button bottom-button" value="Next" />
+		</fieldset>
+		<fieldset class="long-fieldset">
+			<h2 class="fs-title">Welcome package for you</h2>	
+			<h3 class="fs-subtitle" id="coin-statement">To get you started, we prepare welcome package for you</h3>
+			<table style="width:100%">
+			  <tr>
+				<td align="center" width="15%"><img id="giftbox" class="giftboxs" src="lib/images/giftbox.png"></td>
+			  </tr>
+			  <tr>
+			  	<td align="center" width="15%" id="coin-text">500</td>
+			  </tr>
+			</table>
+			<input type="button" id="getkoinNextButton" name="next" class="next action-button bottom-button" value="Next"/>
+			<input type="button" id="getkoinNextButton" name="next" class="action-button bottom-button claim-button" value="Claim the gift"/>
+		</fieldset>
+		<fieldset class="wide-fieldset long-fieldset">
+			<h2 class="fs-title">Choose a type you like</h2>
+			<!--<h3 class="fs-subtitle">Tell me what do you think about this game</h3>-->
+			<select class="image-picker">
+			  <option data-img-src="lib/images/app.png" value="1" class="type-img">1</option>
+			  <option data-img-src="lib/images/game.png" value="2" class="type-img">2</option>
+			  <option data-img-src="lib/images/movie.png" value="3" class="type-img">3</option>
+			</select>
+			<br>
+			<table style="width:100%">
+			  <tr>
+			    <td width="15%" align="right" class="fs-text">App</td>
+			    <td width="50%" class="fs-text">Game</td>
+			    <td width="35%" align="left" class="fs-text">Movie</td>
+			  </tr>
+			</table>
+			<input type="button" name="next" class="next action-button bottom-button" value="Next" />
+		</fieldset>
+		<fieldset>
+			<h2 class="fs-title">Tell your friends about us</h2>
+			<h3 class="fs-subtitle">You can earn more Koins by sharing!</h3>
+			<table style="width:100%">
+			  <tr>
+				<td align="center"><img src="lib/images/share.png"></td>
+			  </tr>
+			</table>
+			<input type="submit" name="submit" class="submit action-button" value="Finish" />
+		</fieldset>
+	</form>
+	<!-- jQuery -->
+	<!--script src="http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js" type="text/javascript"></script-->
+	<!-- jQuery easing plugin -->
+	<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+	<script src="lib/signup.js" type="text/javascript"></script>
+</body>
+</html>

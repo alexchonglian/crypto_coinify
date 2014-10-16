@@ -1,0 +1,23 @@
+en:
+  devise:
+    registrations:
+      new:
+        have_account_html: "Have an account? "
+        titles:
+          site: 'Sign up'
+          header: 'Sign up'
+        links:
+          login: "Log in"
+        form:
+          labels:
+            show_password: 'Show password'
+            name: 'Name'
+            password: 'Password'
+            newsletter: 'I want to subscribe to Koinify newsletter'
+          hint:
+            password_length: 'Must be at least 6 characters.'
+          inputs:
+            submit: 'Sign me up'
+            facebook: 'Sign up with Facebook'
+
+

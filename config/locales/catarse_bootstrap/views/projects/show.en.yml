@@ -1,0 +1,56 @@
+en:
+  projects:
+    updates:
+      update:
+        empty: "This project didn't have updates yet. But wait and see =D"
+        destroy: "Remove update"
+        destroy_confirmation: "Do you want to remove the update?"
+      new:
+        submit: "Send update"
+        comment: "Update text"
+        exclusive: "Visible for contributions only"
+        title: "Title of the update"
+        warning: 'Remembering that every new post goes directly to the email of his supporters. Therefore, review your text well before sending it.'
+        notice: "Novelty successfully sent!"
+    project_reports:
+      no_contributions: "This project don't have any contribution yet."
+      link_reports: 'Download report of '
+      all_contributions: 'all contributions'
+      all_contributions_without_reward: "all contributions that don't select any reward"
+      link_reward: 'Download the report of contributions that selected the reward'
+    project_about:
+      embed: embed
+      embed_title: Embed this project on your website
+    show:
+      contribute_project:
+        display_status:
+          reached_goal: "This project will be successful and funded on %{date}"
+          not_reached_goal: "This project will only be funded if at least %{goal} is contributed until %{date}"
+          failed: "This project didn't reach the goal of %{goal} until %{date} and wasn't funded"
+          successful: "This project was successful and was funded on %{date}"
+          waiting_funds: "Waiting confirmation from payments to know if this project will be funded."
+          draft: "This project is in draft mode and is not open to contributions yet."
+        reached_of: "Reached of"
+        submit: "Support this project"
+      project_by: Project by
+      count_contributed_projects: supported %{total} projects
+      project_header:
+        subtitle_html: "A project of %{link}"
+        without_city: "A project of"
+        with_city: "A project of %{category_name} by %{author} at %{city}"
+      menu:
+        about: About
+        contributions: Contributions
+        comments: Comments
+        updates: Updates
+        edit: Edit
+        reports: Reports
+        add_reward: 'Add Rewards'
+      no_rewards_warning_title: 'Create here your rewards'
+      no_rewards_warning: "Don't go nuts! Think about how you're going to deliver them and include those costs in your budget. People are putting their trust in you, don't kid around with that!"
+      contribution_states:
+        confirmed: Confirmed
+        pending: Pending
+      sidebar:
+        contributions: supporters
+        goal: raised out of %{total}

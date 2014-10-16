@@ -1,0 +1,32 @@
+#page_content
+  .container
+    #project_review data-thank-you-path=project_contribution_path(project_id: @project.id, id: @contribution.id)
+      .project_info
+        = image_tag @project.display_image, id: 'project_image', alt: @project.name, width: '250px'
+        h1= t('.you_are_about_html', link: link_to(@project.name, project_by_slug_path(permalink: @project.permalink)))
+        #review_text
+          .review_content
+            = t('.review_with_reward_html', value: @contribution.display_value)
+
+      .clearfix
+      .bootstrap-form
+        = semantic_form_for current_user, url: credits_checkout_project_contribution_path(@contribution.project, @contribution), html: { data: { update_info_path: project_contribution_path(project_id: @contribution.project.id, id: @contribution.id, format: :json) }, id: 'review_form', class: "form-horizontal #{('dont_align' if @contribution.credits)}", method: 'put' } do |form|
+          = hidden_field_tag 'project_id', @contribution.project.id
+          = hidden_field_tag 'contribution_id', @contribution.id
+          = hidden_field_tag 'contribution_credits', @contribution.credits
+          = hidden_field_tag 'payment_method_url', nil
+
+        #payment data-update-info-path=project_contribution_path(project_id: @contribution.project.id, id: @contribution.id, format: :json)
+
+          .tab_container
+            nav#payment_menu
+              - PaymentEngines.engines.each do |engine|
+                = link_to "#{engine}", id: engine.name, class: 'selected enabled' , data: {target: "##{engine.name}_payment"} do
+                  = t("projects.contributions.review.paypal")
+          /<a href="http://localhost:3000/projects/#{@contribution.project.id}/contributions/#{@contribution.id}/success">Complete purchase</a>
+          /= link_to "Complete purchase", success_project_contribution_path(@contribution)
+          / | Complete purchase
+          .tab_content_container
+            - PaymentEngines.engines.each do |engine|
+              div[id="#{engine.name}_payment" class="payments_type " data-path=engine.review_path(@contribution) ]
+    .clearfix

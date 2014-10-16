@@ -1,0 +1,10 @@
+
+---
+koin_features:
+  columns:
+  - id
+  - name
+  - description
+  - requirement
+  - coin_id
+  records: 

@@ -1,0 +1,21 @@
+= content_for :title, t('.titles.site')
+
+= render 'devise/shared/header'
+
+.row
+  .large-5.large-centered.columns
+    .box.login-box.animated.fadeIn
+      h2.text-center= t '.titles.header'
+      p.text-center.register_link
+        = t '.no_account_html', link: link_to(t('.links.register'), new_user_registration_url)
+      hr
+
+      .large-11.large-centered.columns
+        = form_for(resource, as: resource_name, url: password_url(resource_name)) do |f|
+          = render 'devise/shared/alert'
+          p
+            = f.label :email, t('.form.labels.email')
+            = f.text_field :email, class: [:login, :email], required: true
+
+          .large-7.columns.large-centered
+            = f.submit t('.form.inputs.submit'), class: [:button, :action, 'large-12', 'columns']

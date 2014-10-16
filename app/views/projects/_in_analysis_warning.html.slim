@@ -1,0 +1,28 @@
+br
+- if policy(@project).update?
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Your project is under review.
+      #toggle_warning
+        = link_to '(minimize information)', '#'
+      #project_warning_text
+        br/
+        br/
+        | We are evaluating the information of your draft, we will contact you within 4 working days =)
+        br/
+        | Remember to fill out the information of #{link_to 'profile', user_path(@project.user)} in Koinify.
+        br/
+        br/
+        strong Troubleshooting:
+        br/
+        = link_to 'Help! It has been 4 days and have not had news of curation, what to do?', 'http://suporte.catarse.me/knowledgebase/articles/274766-socorro-j%C3%A1-mandei-h%C3%A1-dois-dias-%C3%BAteis-e-a-curado', target: '__blank'
+- else
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Attention! This project is not online yet! The administrator is responsible for making adjustments!
+      #toggle_warning
+        = link_to '(minimizar informações)', '#'
+      #project_warning_text
+        br/
+        br/
+        | Take the opportunity to take a look at the page and leave your feedback for the administrator there in <strong>Leave Comments</strong>. Help improve the design with your opinion!

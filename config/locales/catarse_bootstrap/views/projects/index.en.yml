@@ -1,0 +1,40 @@
+en:
+  projects:
+    index_header:
+      subtitle: "Fund projects collaboratively and become part of something bigger. Promote a collective catharsis! You're the missing part in this story."
+      subtitle_html: "Fund projects collaboratively and become part of something bigger.<br/>Promote a collective catharsis! You're the missing part in this story."
+      title: "Make the projects you believe in happen"
+    index:
+      box:
+        by: by
+        when: when
+      banner: "Meet the research"
+      links:
+        channels: "Discover the Wings Channel"
+        recommended: "Discover recommended projects"
+        expiring: "Discover projects down the stretch"
+        Recents: "Discover recent projects"
+        near: "Discover exciting projects"
+      sidebar:
+        titles:
+          blog: blog
+          facebook: "already likes our face?" 
+          newsletter: "Subscribe to our news"
+          faq: "'re in doubt?"
+          schedule: agenda
+        placeholders:
+          email: "Enter your email address"
+        buttons:
+          newsletter: Send
+      sections:
+        near:
+          title: 'Next To Me'
+        recommended:
+          title: 'Recommendations'
+        expiring:
+          title: "Projects Live"
+        recents:
+          title: "Recent"
+        channels:
+          title: 'Channel Wings'
+

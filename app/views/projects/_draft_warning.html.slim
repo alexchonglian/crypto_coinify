@@ -1,0 +1,41 @@
+br
+- if policy(@project).update?
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Welcome to Draft!
+      #toggle_warning
+        = link_to '(minimize information)', '#'
+      #project_warning_text
+        br/
+        br/
+        | To edit the page of your project look below the edit tab , do any changes in the form and click <strong>UPDATE INFORMATION</strong>.
+        br/
+        | The rewards can be added directly into the column where they are exposed to it just click <strong>ADD REWARD</strong>.
+        br/
+        br/
+        strong Important!
+        br/
+        | Your project will only be evaluated by our staff when you click the button <strong>Send Project</strong>. We will analyze the consistency of your project based only on the information provided in the draft,
+        | so it is quite clear and objective in building this page. The <strong>Video</strong> is not required for the evaluation, only for the project go live.
+        | If you've done it will be available to us. The more information you provide the better for us to review. Be sure to study the articles in our
+        | #{link_to 'Support Center!', CatarseSettings[:support_forum], target: '__blank'} There you can learn about most of the processes that occur before , during and after a campaign in Koinify!
+        br/
+        br/
+        strong Troubleshooting:
+        br/
+        | Check out: #{link_to 'Filmmakers - First Steps', 'http://suporte.catarse.me/knowledgebase/topics/25764-realizadores-primeiros-passos-pr%C3%A9-projeto-', target: '__blank'}
+      br/
+      br/
+      .bootstrap-twitter
+        = link_to 'Send Project', send_to_analysis_project_path(@project), class: 'btn btn-large'
+- else
+  #project_warning.bootstrap-alert
+    .alert.alert-warning
+      i Attention! This project is still in draft.
+      #toggle_warning
+        = link_to '(minimize information)', '#'
+      #project_warning_text
+        br/
+        br/
+        | This project is still not able to receive financial contributions and the information on this page are not definitive.
+        | If you want to give a force already, leave your feedback for the administrator at <strong>Tab Reviews</strong>.

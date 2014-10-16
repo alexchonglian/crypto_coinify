@@ -1,0 +1,47 @@
+header
+header.header
+  - if current_user
+    <div id="user_id" data-user-id="#{current_user.id}" data-private-key="#{current_user.cp_key}"></div>
+
+  .centered
+    h1 style="margin-top:2px;margin-bottom:2px"
+      a href="/"
+        img src='/assets/logo.jpg' height='55px' style="margin-top: 3px;"
+
+      nav.header-nav
+        ul
+          li.header-nav-li
+            = link_to 'LAUNCH', new_channels_project_path, :class => 'project'
+            /t('.submit')
+          li.header-nav-li
+            = link_to 'TRADE', "/trades", :class => 'project'
+          li.header-nav-li.search
+            = form_tag explore_path, :method => 'GET', :class=>'discover-form' do
+              = text_field_tag :pg_search, nil, autocomplete: "off", value: params[:pg_search], class: "discover-form-input"
+              = submit_tag
+
+
+          / li.header-nav-li
+            = link_to t('.blog'), CatarseSettings['blog_url'], target: :_blank, class: 'header-nav-item' if CatarseSettings['blog_url'].present?
+
+          - if current_user
+            li.header-nav-li.user
+              = link_to '#', class: 'my_profile_link user-menu' do
+                = image_tag(current_user.display_image, :size => "40x40", :class => 'profile-picture')
+              ul.dropdown.user
+                li= link_to t('.profile'), current_user
+                li
+                  = link_to t('layouts.user.my_credits'), user_path(current_user, anchor: 'credits')
+                  .small
+                    | (#{current_user.display_credits})
+                - if current_user.admin? || current_user.channel
+                  li.divider
+                  - for menu, path in controller.menu do
+                    li= link_to menu, path
+                li.divider= link_to t('layouts.user.logout'), destroy_user_session_path, method: :delete
+          - else
+            li.header-nav-li
+              = link_to t('.signup'), sign_up_url, :class => 'header-nav-item'
+            li.header-nav-li
+              = link_to t('.signin'), sign_in_url, :class => 'header-nav-item'
+.clearfix

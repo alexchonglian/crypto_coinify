@@ -1,0 +1,38 @@
+.sampler {background-image:url('/assets/game_titles.png');
+width: 95px;
+    height: 95px;
+}
+.sampler.koin1 {    background-position:-2px -2px; }
+.sampler.koin2 {    background-position:-126px -2px; }
+.sampler.koin3 {    background-position:-250px -2px; }
+.sampler.koin4 {    background-position:-374px -2px; }
+.sampler.koin5 {    background-position:-498px -2px; }
+.sampler.koin6 {    background-position:-622px -2px; }
+.sampler.koin7 {    background-position:-746px -2px; }
+.sampler.koin8 {    background-position:-870px -2px; }
+
+.sampler.koin9 {    background-position:-2px -102px; }
+.sampler.koin10 {    background-position:-126px -102px; }
+.sampler.koin11 {    background-position:-250px -102px; }
+.sampler.koin12 {    background-position:-374px -102px; }
+.sampler.koin13 {    background-position:-498px -102px; }
+.sampler.koin14 {    background-position:-622px -102px; }
+.sampler.koin15 {    background-position:-746px -102px; }
+.sampler.koin16 {    background-position:-870px -102px; }
+
+.sampler.koin17 {    background-position:-2px -202px; }
+.sampler.koin18 {    background-position:-126px -202px; }
+.sampler.koin19 {    background-position:-250px -202px; }
+.sampler.koin20 {    background-position:-374px -202px; }
+.sampler.koin21 {    background-position:-498px -202px; }
+.sampler.koin22 {    background-position:-622px -202px; }
+.sampler.koin23 {    background-position:-746px -202px; }
+.sampler.koin24 {    background-position:-870px -202px; }
+.sampler.koin25 {    background-position:-2px -302px; }
+.sampler.koin26 {    background-position:-126px -302px; }
+.sampler.koin27 {    background-position:-250px -302px; }
+.sampler.koin28 {    background-position:-374px -302px; }
+.sampler.koin29 {    background-position:-498px -302px; }
+.sampler.koin30 {    background-position:-622px -302px; }
+.sampler.koin31 {    background-position:-746px -302px; }
+.sampler.koin32 {    background-position:-870px -302px; }

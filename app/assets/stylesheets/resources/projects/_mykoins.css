@@ -1,0 +1,93 @@
+
+
+.coinbar-group {
+    width: 200px;
+
+}
+.coinbar-group-item {
+    width: 200px;
+    border-width: 1px;
+}
+
+.action-btn {
+    text-align:left;
+
+}
+.action-btn span {
+    float:left;
+}
+
+
+.action-btn-title {
+    font-size: 14px;
+    color: #0654ba;
+
+}
+
+.coinbar-group-item  img {
+    max-height: 45px;
+    max-width: 45px;
+    border-radius: 23px;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
+.coinbar-group-item  h4 {
+    display: inline-block;
+    padding: 5px 0px 3px 5px;
+}
+
+
+.coinbar-group-item .active {
+    background: #e8e8e8;
+    border-width: 3px;
+}
+
+.koinbox {
+    background: #333333;
+    color: #FFFFFF;
+    border-width: 0px;
+    width: 720px;
+    padding-left: 20px;
+    margin-top: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    /*min-height: 200px;*/
+    font-family: "Varela Round";
+    display:inline-block;
+    margin-bottom: 2px;
+}
+
+
+.koin-action-box {
+    background: #FFFFFF;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #333333;
+    border-color: #DDDDDD;
+    border-style: solid;
+    border-width: 1px;
+    width: 720px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    /*min-height: 200px;*/
+    font-family: "Varela Round";
+    display:inline-block;
+}
+
+
+.koin-action-box-title {
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 8px;
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.koinbox-quantity {
+    color: #7af86d;
+    font-size: 2em;
+}

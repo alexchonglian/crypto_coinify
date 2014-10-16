@@ -1,0 +1,32 @@
+en:
+  layouts:
+    footer:
+      titles:
+        about: "About us"
+        social: "Social networks"
+        sitemap: "Browse"
+        newsletter: "Subscribe to our news"
+        contact: "Keep in touch"
+      links:
+        about: "Who we are"
+        faq: "Help"
+        feedback: "Feedback"
+        support: "Support"
+        terms: "Terms"
+        privacy: "Privacy"
+        press: "Press"
+        twitter: "Twitter"
+        facebook: "Facebook"
+        instagram: "Instagram"
+        github: "Github"
+        blog: "Blog"
+        contact: "Contact"
+        recommended: "Recommended"
+        near: "Near me"
+        expiring: "Expiring"
+        recents: "Recent"
+        submit: "Create new Project"
+        discover: "Discover projects"
+      texts:
+        copyleft: "Made with love."
+        copyright: ""
